@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "wfa",
+	"version": "${version}",
+	"name": "Woven Forge API",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/wfa/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.mysticcreations.WovenForgeAPI"
+		],
+		"client": [
+			"net.mysticcreations.WovenForgeAPIClient"
+		],
+		"fabric-datagen": [
+			"net.mysticcreations.WovenForgeAPIDataGenerator"
+		]
+	},
+	"mixins": [
+		"wfa.mixins.json",
+		{
+			"config": "wfa.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.13",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
